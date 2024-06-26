@@ -1,21 +1,11 @@
-import React, { useState } from 'react'
-import './App.css'
-import Switch from 'react-ios-switch'
+import { Frame } from "./examples/Frame";
 
-import Advanced from './examples/Advanced'
-import Simple from './examples/Simple'
-
-function App () {
-  const [showAdvanced, setShowAdvanced] = useState(true)
-
+function App() {
   return (
-    <div className='app'>
-      {showAdvanced ? <Advanced /> : <Simple />}
-      <div className='row'>
-        <p style={{ color: '#fff' }}>Show advanced example</p> <Switch checked={showAdvanced} onChange={setShowAdvanced} />
-      </div>
-    </div>
-  )
+    <>
+      <Frame />
+    </>
+  );
 }
 
-export default App
+export default App;
